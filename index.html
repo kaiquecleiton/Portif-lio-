@@ -44,25 +44,19 @@
             border-color: #3b82f6;
         }
 
-        /* AJUSTE PARA ENQUADRAMENTO DOS PRINTS */
-        .img-enquadrada {
-            width: 100%;
+        .icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 100%;
-            object-fit: cover; /* Preenche o espaço sem distorcer */
-            object-position: top center; /* Garante que foque no topo da página */
-            opacity: 0.8;
-            transition: transform 0.7s ease;
-        }
-        .glass-card:hover .img-enquadrada {
-            transform: scale(1.1);
-            opacity: 1;
+            width: 100%;
         }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-black italic tracking-tighter text-white">LP<span class="text-blue-500 underline text-white">PRO</span></div>
+        <div class="text-2xl font-black italic tracking-tighter text-white">LP<span class="text-blue-500 underline">PRO</span></div>
         <a href="https://wa.me/5567981194737" class="text-xs font-bold uppercase tracking-widest border-b-2 border-blue-500 pb-1">Trabalhe Comigo</a>
     </nav>
 
@@ -84,25 +78,29 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-green-900/20 relative">
-                    <img src="zeromato.jpg" class="img-enquadrada">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-white">Zero Mato</span>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-green-900/10 border border-green-500/10 relative">
+                    <div class="icon-box">
+                        <i class="fas fa-leaf text-6xl text-green-500/40 group-hover:scale-110 group-hover:text-green-500 transition-all duration-700"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500">Zero Mato</span>
                 </div>
                 <div class="p-8">
                     <div class="flex gap-2 mb-4">
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">SEO Local</span>
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Serviços Gerais</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Landing Page focada em roçagem e limpeza de terrenos com visual rústico e premium.</p>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Página otimizada para serviços de roçagem e limpeza de terrenos com foco em conversão rápida.</p>
                     <a href="https://mato67.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-blue-900/20 relative">
-                    <img src="portao.jpg" class="img-enquadrada">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-blue-900/10 border border-blue-500/10 relative">
+                    <div class="icon-box">
+                        <i class="fas fa-door-open text-6xl text-blue-500/40 group-hover:scale-110 group-hover:text-blue-500 transition-all duration-700"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500">Portão Pro</span>
                 </div>
                 <div class="p-8">
@@ -110,15 +108,17 @@
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Segurança</span>
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Automação</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Visual focado em tecnologia e rapidez. Assistência técnica de portões eletrônicos.</p>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Especializada em automação e conserto de portões eletrônicos com design tecnológico.</p>
                     <a href="https://portao-l6w2.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-cyan-900/20 relative">
-                    <img src="climax.jpg" class="img-enquadrada">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-cyan-900/10 border border-cyan-500/10 relative">
+                    <div class="icon-box">
+                        <i class="fas fa-snowflake text-6xl text-cyan-400/40 group-hover:scale-110 group-hover:text-cyan-400 transition-all duration-700"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400">Climax</span>
                 </div>
                 <div class="p-8">
@@ -126,15 +126,17 @@
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Climatização</span>
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Limpeza</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design refrescante e moderno para serviços de instalação de ar-condicionado.</p>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Focada em manutenção e higienização de ar-condicionado com visual moderno e refrescante.</p>
                     <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-yellow-900/20 relative">
-                    <img src="sos-eletricista.jpg" class="img-enquadrada">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-yellow-900/10 border border-yellow-500/10 relative">
+                    <div class="icon-box">
+                        <i class="fas fa-bolt text-6xl text-yellow-500/40 group-hover:scale-110 group-hover:text-yellow-500 transition-all duration-700"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500">SOSEletricista</span>
                 </div>
                 <div class="p-8">
@@ -142,7 +144,7 @@
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Urgência</span>
                         <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Manutenção</span>
                     </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Paleta de alto contraste para serviços elétricos residenciais de emergência.</p>
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design de alto contraste para serviços de eletricista residencial 24h e reparos de emergência.</p>
                     <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
