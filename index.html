@@ -21,7 +21,6 @@
 
         h1, h2, h3, .display-font { font-family: 'Space Grotesk', sans-serif; }
 
-        /* Grid de Engenharia ao Fundo */
         .bg-grid {
             background-size: 40px 40px;
             background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -30,7 +29,6 @@
             -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
         }
 
-        /* Efeito de Texto Metálico Animado */
         .animate-gradient-text {
             background: linear-gradient(to right, #ffffff, #71717a, #ffffff);
             background-size: 200% auto;
@@ -43,7 +41,6 @@
         }
         @keyframes shine { to { background-position: 200% center; } }
 
-        /* Cards de Projeto - Bordas Suaves */
         .elite-card {
             background: linear-gradient(180deg, #09090b 0%, #000000 100%);
             border: 1px solid #18181b;
@@ -55,16 +52,14 @@
             box-shadow: 0 30px 60px -15px rgba(59, 130, 246, 0.15);
         }
 
-        /* Marquee (Letreiro) */
         .marquee-wrapper { display: flex; overflow: hidden; user-select: none; gap: 2.5rem; }
         .marquee-content { display: flex; flex-shrink: 0; gap: 2.5rem; animation: scroll-x 30s linear infinite; }
         @keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(calc(-100% - 2.5rem)); } }
 
-        /* O NOVO BOTÃO PÍLULA ULTRA-PREMIUM (Resolvendo o "Quadradão") */
         .btn-premium-pill {
             position: relative;
             padding: 1.1rem 2.8rem;
-            border-radius: 9999px; /* Formato Pílula */
+            border-radius: 9999px;
             background: linear-gradient(90deg, #2563eb, #9333ea, #db2777);
             background-size: 200% auto;
             color: white;
@@ -85,27 +80,11 @@
             transform: scale(1.05) translateY(-2px);
             box-shadow: 0 25px 50px -12px rgba(124, 58, 237, 0.7);
         }
-
-        .btn-premium-pill::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: rgba(255, 255, 255, 0.15);
-            transform: rotate(45deg);
-            transition: 0.6s;
-            pointer-events: none;
-        }
-
-        .btn-premium-pill:hover::after { left: 120%; }
     </style>
 </head>
 <body class="antialiased relative">
 
     <div class="fixed inset-0 bg-grid pointer-events-none z-[-1]"></div>
-    
     <div class="fixed top-[-10%] left-[50%] translate-x-[-50%] w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[150px] pointer-events-none z-[-1]"></div>
 
     <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-5 backdrop-blur-xl bg-black/60 border-b border-white/5">
@@ -118,120 +97,90 @@
         </div>
     </nav>
 
-    <header class="pt-48 pb-20 px-6 text-center min-h-[90vh] flex flex-col justify-center">
-        <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+    <header class="pt-48 pb-20 px-6 text-center min-h-[80vh] flex flex-col justify-center">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
             <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-10">
                 <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
                 <span class="text-[9px] uppercase tracking-[0.2em] text-zinc-300 font-bold">Agenda Aberta 2026</span>
             </div>
-            
             <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[1] tracking-tighter display-font italic">
                 NÃO CRIO SITES.<br>
                 <span class="animate-gradient-text uppercase">CONSTRUO ESCALA.</span>
             </h1>
-            
             <p class="text-zinc-500 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-16">
-                Arquitetura de conversão avançada para prestadores de serviços de elite. Seu trabalho domina o mercado, sua presença digital deve acompanhar.
+                Arquitetura de conversão avançada para negócios de elite. Performance máxima e design exclusivo para dominar seu mercado.
             </p>
-
-            <a href="#work" class="btn-premium-pill text-xs">
-                Ver Portfólio <i class="fas fa-arrow-down text-[10px]"></i>
-            </a>
+            <a href="#work" class="btn-premium-pill text-xs">Ver Portfólio <i class="fas fa-arrow-down text-[10px]"></i></a>
         </div>
     </header>
 
-    <div class="w-full bg-zinc-950/80 py-5 border-y border-white/5 backdrop-blur-sm mb-32 rotate-[-1.2deg] scale-105 shadow-2xl shadow-black">
-        <div class="marquee-wrapper text-zinc-600 font-black text-[10px] uppercase tracking-[0.5em]">
-            <div class="marquee-content">
-                <span>UI/UX de Elite</span> • <span>Alta Performance</span> • <span>Código Limpo</span> • <span>Estratégia de Vendas</span> • <span>Design Exclusivo</span> •
-            </div>
-            <div class="marquee-content" aria-hidden="true">
-                <span>UI/UX de Elite</span> • <span>Alta Performance</span> • <span>Código Limpo</span> • <span>Estratégia de Vendas</span> • <span>Design Exclusivo</span> •
-            </div>
-        </div>
-    </div>
-
     <main class="max-w-7xl mx-auto px-6 py-12" id="work">
         <div class="flex items-center gap-6 mb-20">
-            <h2 class="text-xl font-bold uppercase tracking-[0.4em] text-white display-font italic">Cases de Sucesso</h2>
+            <h2 class="text-xl font-bold uppercase tracking-[0.4em] text-white display-font italic">Projetos Ativos</h2>
             <div class="h-px flex-grow bg-gradient-to-right from-white/10 to-transparent"></div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <a href="https://mato67.vercel.app" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up">
+            <a href="https://zeromato67.vercel.app/" target="_blank" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up">
                 <div class="h-72 rounded-[2rem] bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-8 border border-white/5 shadow-inner">
                     <i class="fas fa-leaf text-7xl text-zinc-900 group-hover:text-green-500/50 transition-all duration-700 group-hover:scale-125 blur-sm group-hover:blur-0"></i>
-                    <div class="absolute bottom-6 left-6">
-                        <span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Roçagem Profissional</span>
-                    </div>
+                    <div class="absolute bottom-6 left-6"><span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Gestão de Terrenos</span></div>
                 </div>
                 <h3 class="text-3xl font-black text-white mb-3 display-font italic uppercase group-hover:text-blue-500 transition-colors">Zero Mato</h3>
-                <p class="text-zinc-500 text-sm font-light leading-relaxed">Ecossistema focado em captação de leads locais com design de alta credibilidade.</p>
+                <p class="text-zinc-500 text-sm font-light leading-relaxed">Alta conversão para serviços de limpeza e manutenção de lotes.</p>
             </a>
 
-            <a href="https://portao-l6w2.vercel.app" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://eletricista-olive.vercel.app/" target="_blank" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                 <div class="h-72 rounded-[2rem] bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-8 border border-white/5 shadow-inner">
                     <i class="fas fa-shield-alt text-7xl text-zinc-900 group-hover:text-blue-500/50 transition-all duration-700 group-hover:scale-125 blur-sm group-hover:blur-0"></i>
-                    <div class="absolute bottom-6 left-6">
-                        <span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Automação</span>
-                    </div>
+                    <div class="absolute bottom-6 left-6"><span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Segurança Digital</span></div>
                 </div>
                 <h3 class="text-3xl font-black text-white mb-3 display-font italic uppercase group-hover:text-blue-500 transition-colors">Portão Pro</h3>
-                <p class="text-zinc-500 text-sm font-light leading-relaxed">Arquitetura robusta para serviços de segurança e manutenção industrial.</p>
+                <p class="text-zinc-500 text-sm font-light leading-relaxed">Automação e segurança residencial com foco em autoridade.</p>
+            </a>
+
+            <a href="https://residencial-phi.vercel.app/" target="_blank" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up">
+                <div class="h-72 rounded-[2rem] bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-8 border border-white/5 shadow-inner">
+                    <i class="fas fa-bolt text-7xl text-zinc-900 group-hover:text-yellow-500/50 transition-all duration-700 group-hover:scale-125 blur-sm group-hover:blur-0"></i>
+                    <div class="absolute bottom-6 left-6"><span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Emergencial 24h</span></div>
+                </div>
+                <h3 class="text-3xl font-black text-white mb-3 display-font italic uppercase group-hover:text-yellow-500 transition-colors">SOS Eletricista</h3>
+                <p class="text-zinc-500 text-sm font-light leading-relaxed">Design de resposta rápida para serviços elétricos críticos.</p>
+            </a>
+
+            <a href="https://zeromat.vercel.app/" target="_blank" class="elite-card rounded-[3rem] p-8 group flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-72 rounded-[2rem] bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-8 border border-white/5 shadow-inner">
+                    <i class="fas fa-snowflake text-7xl text-zinc-900 group-hover:text-cyan-400/50 transition-all duration-700 group-hover:scale-125 blur-sm group-hover:blur-0"></i>
+                    <div class="absolute bottom-6 left-6"><span class="bg-black/80 backdrop-blur-xl border border-white/10 text-white text-[9px] font-black uppercase tracking-widest px-5 py-2 rounded-full">Climatização</span></div>
+                </div>
+                <h3 class="text-3xl font-black text-white mb-3 display-font italic uppercase group-hover:text-cyan-400 transition-colors">Climax</h3>
+                <p class="text-zinc-500 text-sm font-light leading-relaxed">Engenharia de conforto térmico com interface moderna e leve.</p>
             </a>
         </div>
     </main>
 
-    <section class="mt-40 w-full px-6">
+    <section class="mt-40 w-full px-6 mb-20">
         <div class="max-w-5xl mx-auto bg-zinc-950/40 border border-white/5 py-28 rounded-[4rem] text-center relative overflow-hidden backdrop-blur-3xl shadow-2xl" data-aos="zoom-in">
-            <div class="absolute -top-32 -left-32 w-80 h-80 bg-blue-600/10 blur-[120px]"></div>
-            <div class="absolute -bottom-32 -right-32 w-80 h-80 bg-pink-600/10 blur-[120px]"></div>
-
-            <h2 class="text-4xl md:text-7xl font-black mb-12 tracking-tighter text-white display-font italic uppercase leading-tight">
-                PRONTO PARA <br><span class="text-blue-500">DOMINAR O JOGO?</span>
-            </h2>
-            
-            <a href="https://wa.me/5567981194737" class="btn-premium-pill text-sm md:text-xl">
-                <i class="fab fa-whatsapp"></i> Iniciar Contato
-            </a>
+            <h2 class="text-4xl md:text-7xl font-black mb-12 tracking-tighter text-white display-font italic uppercase leading-tight">PRONTO PARA <br><span class="text-blue-500">VENCER O JOGO?</span></h2>
+            <a href="https://wa.me/5567981194737" class="btn-premium-pill text-sm md:text-xl"><i class="fab fa-whatsapp"></i> Iniciar Contato</a>
         </div>
     </section>
 
-    <footer class="pt-32 pb-12 px-6">
+    <footer class="pb-12 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
-            
-            <div class="md:col-span-6">
+            <div class="md:col-span-8">
                 <div class="text-3xl font-black tracking-tighter text-white display-font italic flex items-center gap-2 mb-6">
                     <div class="w-3 h-3 rounded-full bg-blue-500"></div> LP<span class="text-blue-500 underline decoration-2">PRO</span>
                 </div>
-                <p class="text-zinc-500 text-sm max-w-xs font-light leading-relaxed">
-                    Especialista em criar Landing Pages de alta performance que transformam visitantes em clientes recorrentes.
-                </p>
+                <p class="text-zinc-500 text-sm max-w-xs font-light leading-relaxed">Especialista em criar Landing Pages de alta performance que transformam visitantes em clientes recorrentes.</p>
             </div>
-
-            <div class="md:col-span-3">
-                <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] mb-8">Navegação</h4>
-                <div class="flex flex-col gap-4 text-zinc-500 text-sm font-medium">
-                    <a href="#" class="hover:text-blue-500 transition-colors">Início</a>
-                    <a href="#work" class="hover:text-blue-500 transition-colors">Portfólio</a>
-                    <a href="https://wa.me/5567981194737" class="hover:text-blue-500 transition-colors">Contato</a>
-                </div>
-            </div>
-
-            <div class="md:col-span-3">
-                <h4 class="text-[10px] font-black text-white uppercase tracking-[0.4em] mb-8">Status</h4>
+            <div class="md:col-span-4">
                 <div class="flex items-center gap-3 py-2 px-4 rounded-full bg-blue-500/5 border border-blue-500/20 w-fit mb-6">
                     <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
                     <span class="text-[9px] text-blue-400 font-black uppercase tracking-widest">Online p/ Orçamentos</span>
                 </div>
-                <p class="text-zinc-600 text-[10px] uppercase tracking-widest font-bold">Foco: Prestadores de Serviço</p>
+                <p class="text-zinc-700 text-[9px] uppercase tracking-[0.3em] font-black">© 2026 LP.PRO • Todos os direitos reservados</p>
             </div>
-
-        </div>
-
-        <div class="max-w-7xl mx-auto border-t border-white/5 pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] text-zinc-700 uppercase tracking-[0.3em] font-black">
-            <p>© 2026 LP.PRO • Todos os direitos reservados</p>
-            <p>Design & Code Excellence</p>
         </div>
     </footer>
 
