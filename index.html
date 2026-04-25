@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Pro | Portfólio de Alta Conversão</title>
+    <title>LP PRO | Landing Pages de Alta Conversão</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,33 +15,25 @@
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
 
         .glass-card {
-            background: rgba(30, 41, 59, 0.4);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(30, 41, 59, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.4s ease;
         }
         .glass-card:hover {
-            transform: translateY(-12px) scale(1.02);
+            transform: translateY(-8px);
             border-color: #3b82f6;
-            background: rgba(30, 41, 59, 0.7);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(30, 41, 59, 0.5);
         }
 
         .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #06b6d4, #eab308);
+            background: linear-gradient(to right, #3b82f6, #06b6d4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .btn-main {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .btn-main:hover {
-            background: #3b82f6;
-            color: white;
-            border-color: #3b82f6;
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
     </style>
 </head>
@@ -49,105 +41,60 @@
 
     <nav class="py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
         <div class="text-2xl font-black italic tracking-tighter text-white">LP<span class="text-blue-500 underline">PRO</span></div>
-        <a href="https://wa.me/5567981194737" class="bg-blue-600/10 text-blue-400 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-500/20 hover:bg-blue-600 hover:text-white transition-all">Contato</a>
+        <a href="https://wa.me/5567981194737" class="text-xs font-bold uppercase tracking-widest border-b-2 border-blue-500 pb-1">Contato</a>
     </nav>
 
-    <header class="pt-16 pb-20 px-6 text-center overflow-hidden">
-        <div class="max-w-4xl mx-auto">
-            <span class="inline-block bg-blue-500/10 text-blue-400 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-[0.3em] mb-6" data-aos="fade-down">
+    <header class="pt-16 pb-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <span class="inline-block bg-blue-500/10 text-blue-400 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-[0.3em] mb-6">
                 Portfólio de Projetos 2026
             </span>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Websites que <br><span class="gradient-text">Vendem seu Serviço.</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight italic uppercase">
+                Transformo cliques em <br><span class="gradient-text">Faturamento Real.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                Landing Pages de alta performance desenvolvidas sob medida para prestadores de serviços de elite.
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
+                Landing Pages pensadas para quem busca autoridade e conversão imediata no digital.
             </p>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-8 border border-white/5 rounded-[2rem] bg-slate-900/20" data-aos="fade-right">
-            <i class="fas fa-bolt text-blue-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2 text-white">Velocidade Máxima</h3>
-            <p class="text-slate-500 text-sm">Sites leves que carregam em menos de 2 segundos, evitando que você perca clientes.</p>
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-4 mb-20 text-center">
+        <div class="py-4 border-r border-white/5">
+            <p class="text-blue-500 font-bold text-xl">+90%</p>
+            <p class="text-[9px] text-slate-500 uppercase font-black tracking-widest">Mobile Focus</p>
         </div>
-        <div class="p-8 border border-white/5 rounded-[2rem] bg-slate-900/20" data-aos="fade-up">
-            <i class="fas fa-mobile-alt text-blue-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2 text-white">100% Mobile</h3>
-            <p class="text-slate-500 text-sm">Experiência perfeita em qualquer celular, onde 90% dos seus clientes estão.</p>
+        <div class="py-4 border-r border-white/5">
+            <p class="text-blue-500 font-bold text-xl">< 2s</p>
+            <p class="text-[9px] text-slate-500 uppercase font-black tracking-widest">Velocidade</p>
         </div>
-        <div class="p-8 border border-white/5 rounded-[2rem] bg-slate-900/20" data-aos="fade-left">
-            <i class="fas fa-search-dollar text-blue-500 text-2xl mb-4"></i>
-            <h3 class="font-bold text-lg mb-2 text-white">Foco em Vendas</h3>
-            <p class="text-slate-500 text-sm">Design estratégico com gatilhos mentais para converter visitantes em orçamentos.</p>
+        <div class="py-4">
+            <p class="text-blue-500 font-bold text-xl">ROI</p>
+            <p class="text-[9px] text-slate-500 uppercase font-black tracking-widest">Conversão</p>
         </div>
-    </section>
+    </div>
 
-    <main class="max-w-7xl mx-auto px-6 py-20">
+    <main class="max-w-7xl mx-auto px-6 space-y-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-green-950/20 border border-green-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-leaf text-7xl text-green-500/20 group-hover:text-green-500 group-hover:scale-110 transition-all duration-500"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-80"></div>
+            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up">
+                <div class="overflow-hidden rounded-[1.8rem] h-56 bg-green-950/20 border border-green-500/10 relative flex items-center justify-center">
+                    <i class="fas fa-leaf text-6xl text-green-500/20 group-hover:text-green-500 transition-all duration-500"></i>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500">Zero Mato</span>
                 </div>
-                <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">SEO Local</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Serviços Gerais</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Landing Page focada em roçagem e limpeza de terrenos com visual rústico e premium.</p>
-                    <a href="https://mato67.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                <div class="p-6">
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Página otimizada para serviços de roçagem com foco em agendamento rápido via WhatsApp.</p>
+                    <a href="https://mato67.vercel.app" class="block text-center py-4 border border-white/10 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Projeto Online</a>
                 </div>
             </div>
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-blue-950/20 border border-blue-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-tools text-7xl text-blue-500/20 group-hover:text-blue-500 group-hover:scale-110 transition-all duration-500"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-80"></div>
+            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up">
+                <div class="overflow-hidden rounded-[1.8rem] h-56 bg-blue-950/20 border border-blue-500/10 relative flex items-center justify-center">
+                    <i class="fas fa-tools text-6xl text-blue-500/20 group-hover:text-blue-500 transition-all duration-500"></i>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500">Portão Pro</span>
                 </div>
-                <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Segurança</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Automação</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Visual focado em tecnologia e rapidez. Assistência técnica de portões eletrônicos.</p>
-                    <a href="https://portao-l6w2.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
-                </div>
-            </div>
-
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-cyan-950/20 border border-cyan-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-snowflake text-7xl text-cyan-400/20 group-hover:text-cyan-400 group-hover:scale-110 transition-all duration-500"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400">Climax</span>
-                </div>
-                <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Climatização</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Limpeza</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design refrescante e moderno para serviços de instalação de ar-condicionado.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
-                </div>
-            </div>
-
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-yellow-950/20 border border-yellow-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-bolt text-7xl text-yellow-500/20 group-hover:text-yellow-500 group-hover:scale-110 transition-all duration-500"></i>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500">SOSEletricista</span>
-                </div>
-                <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Urgência</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold text-slate-400">Manutenção</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Paleta de alto contraste para serviços elétricos residenciais de emergência.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                <div class="p-6">
+                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design tecnológico para assistência técnica de portões com foco em autoridade local.</p>
+                    <a href="https://portao-l6w2.vercel.app" class="block text-center py-4 border border-white/10 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Projeto Online</a>
                 </div>
             </div>
 
@@ -156,34 +103,21 @@
 
     <section class="py-24 px-6 text-center">
         <div class="max-w-2xl mx-auto" data-aos="zoom-in">
-            <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase italic text-white leading-tight">Vamos construir seu <br><span class="text-blue-500 underline">próximo sucesso?</span></h2>
-            <p class="text-slate-500 mb-10 text-lg">Desenvolvimento exclusivo sob medida com foco em performance e autoridade.</p>
-            <a href="https://wa.me/5567981194737" class="bg-blue-600 text-white py-5 px-14 rounded-full font-black text-xl shadow-2xl shadow-blue-500/20 transition-all hover:scale-110 inline-block uppercase tracking-wider">
+            <h2 class="text-4xl font-black mb-8 italic">VAMOS CONSTRUIR SEU <br><span class="text-blue-500">PRÓXIMO SUCESSO?</span></h2>
+            <a href="https://wa.me/5567981194737" class="btn-glow bg-blue-600 text-white py-5 px-14 rounded-full font-black text-xl transition-all hover:scale-105 inline-block uppercase italic tracking-tighter">
                 WhatsApp Direto
             </a>
         </div>
     </section>
 
-    <footer class="mt-20 py-12 border-t border-white/5 bg-slate-900/30 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6 text-center">
-            <div class="text-xl font-black italic tracking-tighter opacity-70 text-white">
-                LP<span class="text-blue-500 underline">PRO</span>
-            </div>
-            
-            <div class="flex flex-col items-center gap-2">
-                <p class="text-[11px] font-bold uppercase tracking-[0.4em] text-blue-400">
-                    Design & Code Excellence
-                </p>
-                <p class="text-[10px] text-slate-500 uppercase tracking-[0.2em]">
-                    © 2026 Todos os direitos reservados
-                </p>
-            </div>
-
-            <div class="h-px w-12 bg-gradient-to-r from-transparent via-blue-500/20 to-transparent"></div>
+    <footer class="py-12 border-t border-white/5">
+        <div class="flex flex-col items-center opacity-40">
+            <div class="text-lg font-black italic mb-2">LP<span class="text-blue-500 underline">PRO</span></div>
+            <p class="text-[9px] uppercase tracking-[0.4em]">Design & Code Excellence © 2026</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 1000, once: true }); </script>
+    <script> AOS.init({ duration: 800, once: true }); </script>
 </body>
 </html>
