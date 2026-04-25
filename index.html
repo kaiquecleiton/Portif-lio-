@@ -3,182 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LP PRO | Landing Pages de Elite</title>
+    <title>LP PRO | Elite Web Design</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&family=Space+Grotesk:wght@700&display=swap');
         
         body { 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #020617; 
-            color: #f8fafc; 
+            font-family: 'Outfit', sans-serif; 
+            background-color: #000000; /* Preto absoluto */
+            color: #e4e4e7; 
             overflow-x: hidden;
         }
 
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #06b6d4, #eab308);
+        h1, h2, .display-font { font-family: 'Space Grotesk', sans-serif; }
+
+        /* Background Grid Pattern Profissional */
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        }
+
+        /* Animação de Texto Gradiente */
+        .animate-gradient-text {
+            background: linear-gradient(to right, #ffffff, #71717a, #ffffff);
+            background-size: 200% auto;
+            color: #000;
+            background-clip: text;
+            text-fill-color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+        @keyframes shine { to { background-position: 200% center; } }
+
+        /* Cards Avançados sem borda grossa, apenas glow sutil */
+        .elite-card {
+            background: linear-gradient(180deg, #09090b 0%, #000000 100%);
+            border: 1px solid #18181b;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .elite-card:hover {
+            border-color: #27272a;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(255, 255, 255, 0.05);
         }
 
-        .glass-card {
-            background: rgba(30, 41, 59, 0.3);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+        /* Efeito de Letreiro Animado (Marquee) */
+        .marquee-wrapper { display: flex; overflow: hidden; user-select: none; gap: 2rem; }
+        .marquee-content { display: flex; flex-shrink: 0; gap: 2rem; animation: scroll-x 20s linear infinite; }
+        @keyframes scroll-x { from { transform: translateX(0); } to { transform: translateX(calc(-100% - 2rem)); } }
 
-        .glass-card:hover {
-            transform: translateY(-10px);
-            border-color: #3b82f6;
-            background: rgba(30, 41, 59, 0.5);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        /* Botão Premium com borda gradiente */
+        .btn-gradient-border {
+            position: relative;
+            background: #000;
+            z-index: 1;
         }
-
-        .btn-premium {
-            background: #2563eb;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: -0.02em;
-            font-weight: 800;
-            font-style: italic;
+        .btn-gradient-border::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: inherit;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+            z-index: -1;
+            transition: opacity 0.3s ease;
+            animation: borderRotate 4s linear infinite;
         }
-
-        .btn-premium:hover {
-            transform: scale(1.02);
-            background: #1d4ed8;
-            box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
-        }
-
-        .footer-grid-item h4 {
-            letter-spacing: 0.3em;
-            font-size: 0.7rem;
-        }
+        .btn-gradient-border:hover::before { filter: blur(8px); }
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased relative">
 
-    <nav class="py-8 px-6 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-black italic tracking-tighter text-white">LP<span class="text-blue-500 underline">PRO</span></div>
-        <a href="https://wa.me/5567981194737" class="text-[10px] font-bold uppercase tracking-[0.3em] text-blue-400 border-b-2 border-blue-500/20 pb-1">Orçamentos</a>
+    <div class="fixed inset-0 bg-grid pointer-events-none z-[-1]"></div>
+    
+    <div class="fixed top-[-20%] left-[50%] translate-x-[-50%] w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[120px] pointer-events-none z-[-1]"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-6 transition-all duration-300 backdrop-blur-md bg-black/50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter text-white flex items-center gap-1">
+                <div class="w-2 h-2 bg-white rounded-full"></div> LP.PRO
+            </div>
+            <a href="https://wa.me/5567981194737" class="text-xs font-bold uppercase tracking-[0.2em] text-zinc-400 hover:text-white transition-colors">Iniciar Projeto</a>
+        </div>
     </nav>
 
-    <header class="pt-16 pb-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto" data-aos="fade-up">
-            <span class="inline-block bg-blue-500/10 text-blue-400 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-[0.3em] mb-8">
-                Portfolio 2026 • Exclusive Designs
-            </span>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-8 leading-tight uppercase italic">
-                Transformo cliques em <br><span class="gradient-text">Faturamento Real.</span>
+    <header class="pt-40 pb-20 px-6 text-center min-h-[80vh] flex flex-col justify-center">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+                <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                <span class="text-[9px] uppercase tracking-widest text-zinc-300 font-bold">Aceitando novos clientes</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-8xl font-black mb-6 leading-[1.1] tracking-tighter display-font">
+                NÃO CRIO SITES.<br>
+                <span class="animate-gradient-text">CONSTRUO ESCALA.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                Landing Pages de alta performance desenvolvidas sob medida para prestadores de serviços de elite.
+            
+            <p class="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-12">
+                Arquitetura de conversão avançada para prestadores de serviços que dominam seus mercados. Seu trabalho é de elite, sua presença digital também deve ser.
             </p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[1.8rem] h-64 bg-green-950/20 border border-green-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-leaf text-7xl text-green-500/10 group-hover:text-green-500 transition-all duration-700"></i>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500">Zero Mato</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-slate-500 text-sm mb-8">Página otimizada para roçagem e limpeza de terrenos com alto foco em conversão.</p>
-                    <a href="https://mato67.vercel.app" class="block w-full text-center py-4 rounded-xl border border-white/10 font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Site Online</a>
-                </div>
+    <div class="w-full bg-zinc-900/50 py-4 border-y border-white/5 backdrop-blur-sm mb-24 rotate-[-1deg] scale-105">
+        <div class="marquee-wrapper text-zinc-500 font-bold text-sm uppercase tracking-[0.4em]">
+            <div class="marquee-content">
+                <span>Alta Conversão</span> • <span>Design Exclusivo</span> • <span>Performance Max</span> • <span>Autoridade Digital</span> • <span>UI/UX Premium</span> • 
             </div>
-
-            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[1.8rem] h-64 bg-cyan-950/20 border border-cyan-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-snowflake text-7xl text-cyan-500/10 group-hover:text-cyan-400 transition-all duration-700"></i>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400">Climax</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-slate-500 text-sm mb-8">Design refrescante e moderno para serviços especializados de climatização.</p>
-                    <a href="#" class="block w-full text-center py-4 rounded-xl border border-white/10 font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Site Online</a>
-                </div>
+            <div class="marquee-content" aria-hidden="true">
+                <span>Alta Conversão</span> • <span>Design Exclusivo</span> • <span>Performance Max</span> • <span>Autoridade Digital</span> • <span>UI/UX Premium</span> • 
             </div>
+        </div>
+    </div>
 
-            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[1.8rem] h-64 bg-yellow-950/20 border border-yellow-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-bolt text-7xl text-yellow-500/10 group-hover:text-yellow-500 transition-all duration-700"></i>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500">SOS Eletricista</span>
-                </div>
-                <div class="p-6">
-                    <p class="text-slate-500 text-sm mb-8">Interface de urgência para serviços elétricos com foco em chamadas imediatas.</p>
-                    <a href="#" class="block w-full text-center py-4 rounded-xl border border-white/10 font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Site Online</a>
-                </div>
-            </div>
+    <main class="max-w-7xl mx-auto px-6 py-12" id="work">
+        <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-2xl font-bold uppercase tracking-widest text-white display-font">Projetos Selecionados</h2>
+            <div class="h-[1px] flex-grow bg-white/10"></div>
+        </div>
 
-            <div class="glass-card rounded-[2.5rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[1.8rem] h-64 bg-blue-950/20 border border-blue-500/10 relative flex items-center justify-center">
-                    <i class="fas fa-tools text-7xl text-blue-500/10 group-hover:text-blue-500 transition-all duration-700"></i>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500">Portão Pro</span>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <a href="https://mato67.vercel.app" class="elite-card rounded-2xl p-6 group flex flex-col h-full cursor-pointer" data-aos="fade-up">
+                <div class="h-64 rounded-xl bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-6 border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i class="fas fa-leaf text-6xl text-zinc-800 group-hover:text-green-500 transition-colors duration-500 group-hover:scale-110"></i>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Roçagem</span>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <p class="text-slate-500 text-sm mb-8">Visual tecnológico para manutenção e automação de portões residenciais.</p>
-                    <a href="https://portao-l6w2.vercel.app" class="block w-full text-center py-4 rounded-xl border border-white/10 font-bold uppercase tracking-widest text-[10px] hover:bg-white hover:text-black transition-all">Ver Site Online</a>
+                <div>
+                    <h3 class="text-3xl font-black text-white mb-2 display-font">Zero Mato</h3>
+                    <p class="text-zinc-500 text-sm font-light">Ecossistema de conversão local focado na captação de leads para limpeza de terrenos e roçagem profissional.</p>
                 </div>
-            </div>
+            </a>
+
+            <a href="#" class="elite-card rounded-2xl p-6 group flex flex-col h-full cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-64 rounded-xl bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-6 border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i class="fas fa-snowflake text-6xl text-zinc-800 group-hover:text-cyan-400 transition-colors duration-500 group-hover:scale-110"></i>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Climatização</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-black text-white mb-2 display-font">Climax</h3>
+                    <p class="text-zinc-500 text-sm font-light">Design imersivo e técnico para especialistas em ar-condicionado, focado em transmitir frescor e confiança.</p>
+                </div>
+            </a>
+
+            <a href="#" class="elite-card rounded-2xl p-6 group flex flex-col h-full cursor-pointer" data-aos="fade-up">
+                <div class="h-64 rounded-xl bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-6 border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i class="fas fa-bolt text-6xl text-zinc-800 group-hover:text-yellow-500 transition-colors duration-500 group-hover:scale-110"></i>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Urgência</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-black text-white mb-2 display-font">SOS Eletricista</h3>
+                    <p class="text-zinc-500 text-sm font-light">Interface desenhada sob a psicologia de urgência. CTAs diretos e contraste projetado para chamadas instantâneas.</p>
+                </div>
+            </a>
+
+            <a href="https://portao-l6w2.vercel.app" class="elite-card rounded-2xl p-6 group flex flex-col h-full cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-64 rounded-xl bg-zinc-950 flex items-center justify-center relative overflow-hidden mb-6 border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i class="fas fa-shield-alt text-6xl text-zinc-800 group-hover:text-blue-500 transition-colors duration-500 group-hover:scale-110"></i>
+                    <div class="absolute bottom-4 left-4">
+                        <span class="bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Segurança</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-black text-white mb-2 display-font">Portão Pro</h3>
+                    <p class="text-zinc-500 text-sm font-light">Visual robusto e tecnológico para serviços de automação e manutenção de portões residenciais e industriais.</p>
+                </div>
+            </a>
 
         </div>
     </main>
 
-    <section class="mt-20">
-        <div class="max-w-4xl mx-auto px-6 text-center mb-16" data-aos="zoom-in">
-            <h2 class="text-4xl md:text-6xl font-extrabold mb-6 italic uppercase leading-tight">
-                Vamos construir seu <br><span class="text-blue-500">Próximo Sucesso?</span>
-            </h2>
-            <p class="text-slate-500">Design exclusivo com foco em performance e autoridade.</p>
+    <section class="mt-24 w-full">
+        <div class="bg-zinc-950 border-y border-white/10 py-32 px-6 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-900/10 blur-[100px] pointer-events-none"></div>
+            
+            <div class="max-w-4xl mx-auto flex flex-col items-center text-center relative z-10" data-aos="zoom-in">
+                <h2 class="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-white display-font">
+                    PRONTO PARA <br>DOMINAR O SEU SETOR?
+                </h2>
+                <a href="https://wa.me/5567981194737" class="btn-gradient-border w-full md:w-auto px-16 py-6 md:rounded-full flex justify-center items-center gap-4 text-white uppercase tracking-widest font-bold text-xl md:text-2xl">
+                    <i class="fab fa-whatsapp"></i> Iniciar Contato
+                </a>
+            </div>
         </div>
-        <a href="https://wa.me/5567981194737" class="btn-premium block w-full py-8 text-center text-2xl md:text-3xl tracking-tighter shadow-2xl">
-            WHATSAPP DIRETO
-        </a>
     </section>
 
-    <footer class="pt-24 pb-12 bg-slate-950/50 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-16">
+    <footer class="pt-24 pb-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
             
-            <div class="footer-grid-item">
-                <div class="text-3xl font-black italic tracking-tighter text-white mb-6">LP<span class="text-blue-500 underline">PRO</span></div>
-                <p class="text-slate-500 text-sm leading-relaxed">
-                    Especialista em criar Landing Pages de alta performance que transformam visitantes em clientes recorrentes.
-                </p>
+            <div class="md:col-span-6 flex flex-col items-start">
+                <div class="text-4xl font-black tracking-tighter text-white mb-4 display-font">LP.PRO</div>
+                <p class="text-zinc-500 text-sm max-w-sm font-light">Desenvolvimento de ecossistemas digitais de alta performance. Nós criamos a estrutura, você colhe os resultados.</p>
             </div>
 
-            <div class="footer-grid-item">
-                <h4 class="font-bold uppercase text-blue-400 mb-6">Navegação</h4>
-                <ul class="space-y-4 text-slate-400 text-sm">
-                    <li><a href="#" class="hover:text-white transition-colors">Início</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Portfólio</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Contato</a></li>
-                </ul>
+            <div class="md:col-span-3 flex flex-col items-start gap-4">
+                <h4 class="text-xs font-bold text-zinc-300 uppercase tracking-widest">Acesso Rápido</h4>
+                <a href="#" class="text-zinc-600 text-sm hover:text-white transition-colors">Início</a>
+                <a href="#work" class="text-zinc-600 text-sm hover:text-white transition-colors">Portfólio</a>
+                <a href="https://wa.me/5567981194737" class="text-zinc-600 text-sm hover:text-white transition-colors">Contato Direto</a>
             </div>
 
-            <div class="footer-grid-item">
-                <h4 class="font-bold uppercase text-blue-400 mb-6">Status de Projeto</h4>
-                <div class="flex items-center gap-3">
-                    <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                    <span class="text-xs font-bold uppercase tracking-widest text-green-500">Disponível para Orçamentos</span>
+            <div class="md:col-span-3 flex flex-col items-start gap-4">
+                <h4 class="text-xs font-bold text-zinc-300 uppercase tracking-widest">Informações</h4>
+                <p class="text-zinc-600 text-sm">Disponibilidade: Imediata</p>
+                <p class="text-zinc-600 text-sm">Foco: Prestadores de Serviço</p>
+                <div class="flex items-center gap-2 mt-2">
+                    <div class="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+                    <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest">Sistema Operacional</span>
                 </div>
             </div>
 
         </div>
 
-        <div class="max-w-7xl mx-auto px-8 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
-            <p class="text-[9px] font-bold uppercase tracking-[0.5em] text-slate-600">Design & Code Excellence © 2026</p>
-            <p class="text-[9px] font-bold uppercase tracking-[0.5em] text-slate-600">Todos os direitos reservados</p>
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-zinc-600 uppercase tracking-widest font-bold">
+            <p>2026 © LP.PRO</p>
+            <p>Design por Vanguarda Digital</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script> AOS.init({ duration: 800, once: true }); </script>
+    <script> 
+        AOS.init({ 
+            duration: 800, 
+            once: true,
+            easing: 'ease-out-cubic'
+        }); 
+    </script>
 </body>
 </html>
