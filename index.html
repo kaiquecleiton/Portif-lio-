@@ -1,234 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Premium | Portfólio de Landing Pages</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
 
-  <title>Eletricista em Ribas do Rio Pardo | Instalação e Manutenção de Portões</title>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-10px);
+            border-color: #3b82f6;
+            background: rgba(30, 41, 59, 0.6);
+        }
 
-  <meta name="description" content="Eletricista em Ribas do Rio Pardo. Instalação elétrica, manutenção, portões eletrônicos e serviços rápidos com preço justo. Fale no WhatsApp.">
-  <meta name="author" content="Seu Nome ou Marca">
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #60a5fa, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-  <meta property="og:title" content="Eletricista em Ribas do Rio Pardo">
-  <meta property="og:description" content="Instalação elétrica e portões eletrônicos com atendimento rápido.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="eletrica.jpg">
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-
-    :root {
-      --primary:#0D47A1;
-      --bg:#F4F6F3;
-      --text:#1F1F1F;
-      --cta:#FF9800;
-    }
-
-    body {
-      font-family:'Inter',sans-serif;
-      background:var(--bg);
-      color:var(--text);
-    }
-
-    section {
-      padding:35px 20px;
-      text-align:center;
-    }
-
-    .hero {
-      padding:35px 20px 25px;
-      background: linear-gradient(180deg, #F4F6F3 0%, #FFFFFF 100%);
-    }
-
-    .hero-content {
-      max-width:480px;
-      margin:auto;
-    }
-
-    .hero h1 {
-      font-size:26px;
-      font-weight:600;
-      margin-bottom:8px;
-    }
-
-    .hero p {
-      font-size:14px;
-      color:#555;
-      margin-bottom:15px;
-    }
-
-    .botao {
-      display:block;
-      width:250px;
-      margin:0 auto 15px;
-      background:linear-gradient(135deg,#FF9800,#FF6F00);
-      color:#fff;
-      padding:12px 0;
-      border-radius:8px;
-      text-decoration:none;
-      font-weight:600;
-    }
-
-    .slider-novo {
-      width:250px;
-      margin:15px auto 0;
-      position:relative;
-    }
-
-    .slider-novo img {
-      width:100%;
-      border-radius:10px;
-    }
-
-    .slider-label {
-      position:absolute;
-      top:6px;
-      left:6px;
-      background:#000;
-      color:#fff;
-      padding:3px 6px;
-      border-radius:4px;
-      font-size:11px;
-    }
-
-    h2 {
-      font-size:20px;
-      color:var(--primary);
-      margin-bottom:10px;
-    }
-
-    .card {
-      background:#fff;
-      padding:15px;
-      border-radius:8px;
-      max-width:360px;
-      margin:0 auto;
-      font-size:14px;
-      line-height:1.5;
-    }
-
-    /* RESULTADOS */
-    .resultados {
-      overflow: hidden;
-    }
-
-    .slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding:10px;
-    }
-
-    .par {
-      display: flex;
-      min-width: 100%;
-      gap:10px;
-      scroll-snap-align: start;
-    }
-
-    .par img {
-      width:50%;
-      border-radius:8px;
-      object-fit:cover;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      background: #25D366;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      animation: pulse 2s infinite;
-      z-index: 99999;
-    }
-
-    .whatsapp img {
-      width:34px;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow:0 0 0 0 rgba(37,211,102,0.5); }
-      70% { box-shadow:0 0 0 12px rgba(37,211,102,0); }
-      100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
-    }
-
-  </style>
+        .btn-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+        }
+    </style>
 </head>
+<body class="antialiased">
 
-<body>
+    <header class="py-8 px-6 text-center" data-aos="fade-down">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Meu Portfólio <span class="gradient-text">Premium</span></h1>
+        <p class="text-slate-400 max-w-2xl mx-auto">Especialista em Landing Pages de alta conversão para prestadores de serviços e empresas locais.</p>
+    </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Eletricista em Ribas do Rio Pardo com atendimento rápido e profissional</h1>
-    <p>Instalações elétricas, manutenção e portões eletrônicos</p>
+    <main class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-    <a href="https://wa.me/5567981194737?text=Olá,%20preciso%20de%20eletricista" class="botao">
-      Solicitar atendimento
-    </a>
+            <div class="glass-card rounded-[2.5rem] overflow-hidden" data-aos="fade-up">
+                <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-600 flex items-center justify-center relative group">
+                    <i class="fas fa-bolt text-6xl text-white opacity-20 group-hover:scale-125 transition-transform"></i>
+                    <span class="absolute bottom-4 left-6 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Eletricista Pro</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3">LP Eletricista de Alto Padrão</h3>
+                    <p class="text-slate-400 text-sm mb-6">Focada em segurança e confiança, com visual dark e botões em destaque amarelo.</p>
+                    <a href="#" class="block text-center bg-white/10 hover:bg-white/20 py-3 rounded-xl font-bold transition-all">Ver Projeto</a>
+                </div>
+            </div>
 
-    <div class="slider-novo">
-      <img id="slideImg" src="eletrica1.jpg" alt="Serviço elétrico">
-      <div class="slider-label" id="slideLabel">Serviço</div>
-    </div>
-  </div>
-</section>
+            <div class="glass-card rounded-[2.5rem] overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-48 bg-gradient-to-br from-blue-500 to-indigo-700 flex items-center justify-center relative group">
+                    <i class="fas fa-shield-alt text-6xl text-white opacity-20 group-hover:scale-125 transition-transform"></i>
+                    <span class="absolute bottom-4 left-6 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Portão Pro</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3">LP Automação de Portões</h3>
+                    <p class="text-slate-400 text-sm mb-6">Visual corporativo e tecnológico, focado em velocidade e segurança residencial.</p>
+                    <a href="#" class="block text-center bg-white/10 hover:bg-white/20 py-3 rounded-xl font-bold transition-all">Ver Projeto</a>
+                </div>
+            </div>
 
-<section>
-  <h2>Serviços</h2>
-  <div class="card">
-    Instalação elétrica residencial • Manutenção • Troca de disjuntores •
-    Portões eletrônicos • Automatização • Reparos urgentes
-  </div>
-</section>
+            <div class="glass-card rounded-[2.5rem] overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-800 flex items-center justify-center relative group">
+                    <i class="fas fa-leaf text-6xl text-white opacity-20 group-hover:scale-125 transition-transform"></i>
+                    <span class="absolute bottom-4 left-6 bg-black/50 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Zero Mato</span>
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold mb-3">LP Roçagem e Limpeza</h3>
+                    <p class="text-slate-400 text-sm mb-6">Otimizada para SEO Local (Ribas do Rio Pardo), com prova social e antes/depois.</p>
+                    <a href="#" class="block text-center bg-white/10 hover:bg-white/20 py-3 rounded-xl font-bold transition-all">Ver Projeto</a>
+                </div>
+            </div>
 
-<section>
-  <h2>Antes e Depois</h2>
+        </div>
+    </main>
 
-  <div class="resultados">
-    <div class="slider">
+    <section class="py-24 px-6 text-center" data-aos="zoom-in">
+        <div class="glass-card max-w-4xl mx-auto p-12 rounded-[3rem] border-blue-500/30">
+            <h2 class="text-3xl md:text-4xl font-black mb-6 italic">Precisa de uma página <br>que vende de verdade?</h2>
+            <p class="text-slate-400 mb-8">Fale comigo agora e vamos transformar seu negócio com uma LP profissional.</p>
+            <a href="https://wa.me/seunumerosaqui" class="bg-blue-600 hover:bg-blue-500 text-white py-4 px-12 rounded-2xl font-black text-xl transition-all inline-block btn-glow">
+                ME CHAME NO WHATSAPP
+            </a>
+        </div>
+    </section>
 
-      <div class="par">
-        <img src="antes1.jpg" alt="Instalação antes">
-        <img src="depois1.jpg" alt="Instalação depois">
-      </div>
+    <footer class="py-12 text-center text-slate-600 text-xs">
+        <p>© 2026 Desenvolvido com foco em resultados.</p>
+    </footer>
 
-      <div class="par">
-        <img src="antes2.jpg" alt="Portão antes">
-        <img src="depois2.jpg" alt="Portão depois">
-      </div>
-
-    </div>
-  </div>
-
-  <p style="font-size:13px; color:#666; max-width:500px; margin:10px auto;">
-    Serviços elétricos em Ribas do Rio Pardo com qualidade, segurança e agilidade.
-  </p>
-</section>
-
-<a href="https://wa.me/5567981194737?text=Olá,%20preciso%20de%20eletricista" class="whatsapp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-</a>
-
-<script>
-const imagens = ["eletrica1.jpg","eletrica2.jpg"];
-let index = 0;
-
-setInterval(() => {
-  index++;
-  if(index >= imagens.length) index = 0;
-  document.getElementById("slideImg").src = imagens[index];
-}, 2500);
-</script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
 </body>
 </html>
