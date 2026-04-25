@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LP PRO | Especialista em Landing Pages</title>
+    <title>LP PRO | Portfólio de Alta Conversão</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,6 +11,7 @@
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
 
         .glass-card {
@@ -18,10 +19,12 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
         }
         .glass-card:hover {
             transform: translateY(-12px);
             border-color: #3b82f6;
+            background: rgba(30, 41, 59, 0.7);
         }
 
         .gradient-text {
@@ -30,102 +33,111 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Ajuste de Enquadramento dos Prints */
-        .img-wrapper {
+        /* Ajuste Mestre para as Imagens */
+        .thumb-container {
             width: 100%;
-            height: 100%;
+            height: 260px;
+            position: relative;
             overflow: hidden;
         }
-        
-        .img-wrapper img {
+
+        .thumb-container img {
             width: 100%;
             height: 100%;
             object-fit: cover; /* Preenche o espaço sem distorcer */
-            object-position: top; /* Garante que o topo da página (Logo/Headline) apareça */
+            object-position: top center; /* Foca no topo da página (Logo/Headline) */
+            transition: transform 0.8s ease;
+        }
+
+        .glass-card:hover .thumb-container img {
+            transform: scale(1.1); /* Zoom suave ao passar o mouse */
+        }
+
+        .btn-main {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .btn-main:hover {
+            background: #3b82f6;
+            border-color: #3b82f6;
+            color: white;
         }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-black italic tracking-tighter text-white">LP<span class="text-blue-500 underline">PRO</span></div>
-        <a href="https://wa.me/5567981194737" class="bg-blue-600 text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-transform hover:scale-105 shadow-lg shadow-blue-500/20">CONTATO</a>
+        <div class="text-2xl font-black italic tracking-tighter">LP<span class="text-blue-500 underline">PRO</span></div>
+        <a href="https://wa.me/5567981194737" class="text-xs font-bold uppercase tracking-widest border-b-2 border-blue-500 pb-1">Trabalhe Comigo</a>
     </nav>
 
     <header class="pt-16 pb-20 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto" data-aos="fade-up">
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
                 Websites que <br><span class="gradient-text">vendem seu serviço.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
-                Landing Pages de alta performance desenvolvidas para converter visitantes em clientes reais.
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
+                Landing Pages pensadas para prestadores de serviço que buscam autoridade imediata.
             </p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 py-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-72 relative bg-slate-900 border border-white/5">
-                    <div class="img-wrapper">
-                        <img src="zeromato.jpg" alt="Landing Page Zero Mato" class="group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500 tracking-tighter">Zero Mato</span>
+            <div class="glass-card rounded-[3rem]" data-aos="fade-up">
+                <div class="thumb-container">
+                    <img src="zeromato.jpg" alt="Zero Mato">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-90"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500 tracking-tighter text-shadow">Zero Mato</span>
                 </div>
                 <div class="p-8">
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design rústico e premium focado em serviços de roçagem e limpeza de terrenos.</p>
-                    <a href="https://mato67.vercel.app" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:border-blue-600 transition-all">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Página de alta conversão para serviços de roçagem e limpeza de terrenos.</p>
+                    <a href="https://mato67.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-72 relative bg-slate-900 border border-white/5">
-                    <div class="img-wrapper">
-                        <img src="portao.jpg" alt="Landing Page Portão Pro" class="group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500 tracking-tighter">Portão Pro</span>
+            <div class="glass-card rounded-[3rem]" data-aos="fade-up" data-aos-delay="100">
+                <div class="thumb-container">
+                    <img src="portao.jpg" alt="Portão Pro">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-90"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500 tracking-tighter text-shadow">Portão Pro</span>
                 </div>
                 <div class="p-8">
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Visual tecnológico e ágil para assistência técnica de portões eletrônicos.</p>
-                    <a href="https://portao-l6w2.vercel.app" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:border-blue-600 transition-all">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Assistência técnica de portões eletrônicos com foco em rapidez e segurança.</p>
+                    <a href="https://portao-l6w2.vercel.app" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-72 relative bg-slate-900 border border-white/5">
-                    <div class="img-wrapper">
-                        <img src="climax.jpg" alt="Landing Page Climax" class="group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400 tracking-tighter">Climax</span>
+            <div class="glass-card rounded-[3rem]" data-aos="fade-up">
+                <div class="thumb-container">
+                    <img src="climax.jpg" alt="Climax">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-90"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400 tracking-tighter text-shadow">Climax</span>
                 </div>
                 <div class="p-8">
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Paleta de cores frias focada em higienização e instalação de ar-condicionado.</p>
-                    <a href="#" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:border-blue-600 transition-all">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Especialista em climatização, manutenção e instalação de ar-condicionado.</p>
+                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
-            <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-72 relative bg-slate-900 border border-white/5">
-                    <div class="img-wrapper">
-                        <img src="sos-eletricista.jpg" alt="Landing Page SOSEletricista" class="group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-80"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500 tracking-tighter">SOSEletricista</span>
+            <div class="glass-card rounded-[3rem]" data-aos="fade-up" data-aos-delay="100">
+                <div class="thumb-container">
+                    <img src="sos-eletricista.jpg" alt="SOSEletricista">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent opacity-90"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500 tracking-tighter text-shadow">SOSEletricista</span>
                 </div>
                 <div class="p-8">
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">Design de urgência e segurança para eletricistas residenciais 24 horas.</p>
-                    <a href="#" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] tracking-widest hover:bg-blue-600 hover:border-blue-600 transition-all">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Urgência e manutenção elétrica residencial com atendimento 24 horas.</p>
+                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer class="py-16 text-center text-[10px] text-slate-600 uppercase tracking-[0.4em]">
+    <footer class="py-12 text-center text-[10px] text-slate-600 uppercase tracking-widest">
         Design & Code by LP PRO © 2026
     </footer>
 
