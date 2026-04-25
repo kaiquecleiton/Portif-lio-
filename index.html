@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Pro | Portfólio de Alta Conversão</title>
+    <title>LP PRO | Especialista em Landing Pages</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,7 +11,6 @@
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-        
         body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: #f8fafc; }
 
         .glass-card {
@@ -21,10 +20,8 @@
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            transform: translateY(-12px) scale(1.02);
+            transform: translateY(-12px);
             border-color: #3b82f6;
-            background: rgba(30, 41, 59, 0.7);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
 
         .gradient-text {
@@ -32,36 +29,22 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .btn-main {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        .btn-main:hover {
-            background: #3b82f6;
-            color: white;
-            border-color: #3b82f6;
-        }
     </style>
 </head>
 <body class="antialiased">
 
     <nav class="py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
         <div class="text-2xl font-black italic tracking-tighter">LP<span class="text-blue-500 underline">PRO</span></div>
-        <a href="https://wa.me/5567981194737" class="text-xs font-bold uppercase tracking-widest border-b-2 border-blue-500 pb-1">Trabalhe Comigo</a>
+        <a href="https://wa.me/5567981194737" class="bg-blue-600 text-white px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest transition-transform hover:scale-105">CONTATO</a>
     </nav>
 
-    <header class="pt-16 pb-20 px-6 text-center overflow-hidden">
+    <header class="pt-16 pb-20 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <span class="inline-block bg-blue-500/10 text-blue-400 text-[10px] font-bold px-4 py-2 rounded-full uppercase tracking-[0.3em] mb-6" data-aos="fade-down">
-                Portfólio de Projetos 2026
-            </span>
-            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight">
-                Transformo cliques em <br><span class="gradient-text">Faturamento Real.</span>
+            <h1 class="text-4xl md:text-7xl font-extrabold mb-6 leading-tight" data-aos="fade-up">
+                Websites que <br><span class="gradient-text">vendem seu serviço.</span>
             </h1>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10">
-                Landing Pages pensadas para prestadores de serviço que buscam autoridade e conversão imediata.
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+                Landing Pages de alta performance para prestadores de serviços de elite.
             </p>
         </div>
     </header>
@@ -70,87 +53,57 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-green-900/20 relative">
-                    <img src="23363.jpg" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
-                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic">Zero Mato</span>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 relative bg-slate-800">
+                    <img src="zeromato.jpg" alt="Landing Page Zero Mato" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"></div>
+                    <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-green-500">Zero Mato</span>
                 </div>
                 <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">SEO Local</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Serviços Gerais</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6">Landing Page focada em roçagem e limpeza de terrenos com visual rústico e premium.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Página otimizada para serviços de roçagem e limpeza de terrenos.</p>
+                    <a href="https://mato67.vercel.app" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] hover:bg-white/5">Ver Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-blue-900/20 relative">
-                    <img src="23365.jpg" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 relative bg-slate-800">
+                    <img src="portao.jpg" alt="Landing Page Portão Pro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-blue-500">Portão Pro</span>
                 </div>
                 <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Segurança</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Automação</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6">Visual focado em tecnologia e rapidez. Assistência técnica de portões eletrônicos.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Especializada em consertos rápidos e instalação de motores elétricos.</p>
+                    <a href="https://portao-l6w2.vercel.app" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] hover:bg-white/5">Ver Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-cyan-900/20 relative">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <i class="fas fa-snowflake text-6xl text-cyan-400/20"></i>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 relative bg-slate-800">
+                    <img src="climax.jpg" alt="Landing Page Climax" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-cyan-400">Climax</span>
                 </div>
                 <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Climatização</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Limpeza</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6">Design refrescante e moderno para serviços de instalação de ar-condicionado.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Focada em manutenção e higienização de ar-condicionado.</p>
+                    <a href="#" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] hover:bg-white/5">Ver Online</a>
                 </div>
             </div>
 
             <div class="glass-card rounded-[3rem] p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-[2.2rem] h-64 bg-yellow-900/20 relative">
-                    <div class="w-full h-full flex items-center justify-center">
-                        <i class="fas fa-bolt text-6xl text-yellow-500/20"></i>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent"></div>
+                <div class="overflow-hidden rounded-[2.2rem] h-64 relative bg-slate-800">
+                    <img src="sos-eletricista.jpg" alt="Landing Page SOSEletricista" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60"></div>
                     <span class="absolute bottom-6 left-8 font-black text-2xl uppercase italic text-yellow-500">SOSEletricista</span>
                 </div>
                 <div class="p-8">
-                    <div class="flex gap-2 mb-4">
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Urgência</span>
-                        <span class="text-[9px] border border-white/10 px-3 py-1 rounded-full uppercase font-bold">Manutenção</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-6">Paleta de alto contraste para serviços elétricos residenciais de emergência.</p>
-                    <a href="#" class="btn-main block text-center py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px]">Ver Projeto Online</a>
+                    <p class="text-slate-400 text-sm mb-6">Urgência e segurança para serviços elétricos residenciais.</p>
+                    <a href="#" class="block text-center py-4 rounded-2xl border border-white/10 font-bold uppercase text-[10px] hover:bg-white/5">Ver Online</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <section class="py-24 px-6 text-center">
-        <div class="max-w-2xl mx-auto" data-aos="zoom-in">
-            <h2 class="text-3xl font-black mb-6 uppercase italic">Vamos construir seu próximo <br><span class="text-blue-500">sucesso?</span></h2>
-            <p class="text-slate-500 mb-10">Desenvolvimento sob medida com foco em performance e design exclusivo.</p>
-            <a href="https://wa.me/5567981194737" class="bg-blue-600 text-white py-5 px-14 rounded-full font-black text-xl shadow-2xl shadow-blue-500/20 transition-all hover:scale-110">
-                WHATSAPP DIRETO
-            </a>
-        </div>
-    </section>
-
-    <footer class="py-10 text-center text-[10px] text-slate-600 uppercase tracking-widest">
+    <footer class="py-12 text-center text-[10px] text-slate-600 uppercase tracking-widest">
         Design & Code by LP PRO © 2026
     </footer>
 
